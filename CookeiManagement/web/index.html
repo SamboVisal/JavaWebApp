@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: aqua;
+            }
+            .main{
+                background: rgba(19, 35, 47, 0.9);
+                padding: 30px;
+                max-width: 720px;
+                margin: 40px auto;
+                border-radius: 4px;
+                box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+            }
+            .label{
+                position: absolute;
+                left: 13px;
+                font-size: 20px;
+                transform: translateX(6px);
+                color: rgba(255, 255, 255, 0.5);
+                transition: all 0.25s ease;
+                pointer-events: none;
+            }
+            input, textarea{
+                font-size: 22px;
+                display: block;
+                width: 100%;
+                padding: 5px 10px;
+                border: 1px solid black;
+                color: #ffffff;
+                background: none;
+                background-image: none;
+                border-radius: 0;
+                transition:  border-color .25s ease, box-shadow .25 ease;
+            }
+            input:focus, textarea:focus{
+                outline: 0;
+                border-color: #1ab188;
+            }
+            textarea{
+                border: 2px solid #a0b3b0;
+                resize: vertical;
+            }
+            .field-wrap{
+                position: relative;
+                margin-bottom: 20px;
+            }
+            .top-row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .top-row > div {
+                float: left;
+                width:100%;
+                margin-right: 4%;
+            }
+            .top-row > div:last-child {
+                margin: 0;
+            }	
+            .top-row{
+                margin-bottom: 20px;
+            }
+            .button {
+                border: 0;
+                outline: none;
+                border-radius: 0;
+                padding: 15px 0;
+                font-size: 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                background: #1ab188;
+                color: #ffffff;
+                transition: all 0.5s ease;
+            }
+            .button:hover, .button:focus {
+                background: #179b77;
+            }
+
+            .button-block {
+                display: block;
+                width: 100%;
+            }
+            h1{
+                color:white;
+                text-align: center;
+                font-family: lato;
+            }
+        </style>
+        <title>No- Title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="main">
+            <h1>Welcome To Sign Up</h1>
+            <form action="NewServlet" method="post">
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>
+                            Username:
+                        </label>
+                        <input type="text" required autocomplete="off" name="name" />
+                    </div>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Email Address
+                    </label>
+                    <input type="email"required autocomplete="off" name="email"/>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Set A Password
+                    </label>
+                    <input type="password"required autocomplete="off" name="pass"/>
+                </div>
+
+                <button type="submit" class="button button-block"/>Sign Up</button>
+            </form>
+        </div>
+    </body>
+</html>
