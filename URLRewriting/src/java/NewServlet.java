@@ -37,6 +37,7 @@ public class NewServlet extends HttpServlet {
         PrintWriter pw = response.getWriter();
         pw.println("Welcome "+name+" Your email is "+email);
         pw.println("<br><a href='welcome'>View Details</a>");
+        pw.print("<a href='second?uname="+name+"'>visit</a>");
     }
 
    

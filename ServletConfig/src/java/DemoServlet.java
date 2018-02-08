@@ -6,8 +6,8 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,27 +16,25 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author sambo visal
  */
-public class Second extends HttpServlet {
+public class DemoServlet extends HttpServlet {
 
-
+  
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html");
+        ServletConfig con = getServletConfig();
+         String name =  con.getInitParameter("School");
+         PrintWriter pw = response.getWriter();
+         pw.print(name);
     }
-
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PrintWriter s = response.getWriter();
-        Cookie ok[] = request.getCookies();
-     
-        for(Cookie e : ok){
-            s.println(e.getName());
-        }
-        
     }
-// </editor-fold>
+
+
 
 }

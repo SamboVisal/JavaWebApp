@@ -20,3 +20,17 @@
 /JDBCTest/build/
 /JDBCINsert/nbproject/private/
 /JDBCINsert/build/
+/JDBCPREPARE/nbproject/private/
+/JDBCPREPARE/build/
+/TransactionTest/nbproject/private/
+/ServletConfig/nbproject/private/
+/ServletConfig/build/
+/JDBCBatch/nbproject/private/
+/JDBCBatch/build/
+/JDBCBatchPrepare/nbproject/private/
+/SessionObject/nbproject/private/
+/SessionObject/build/
+/CounterProject/nbproject/private/
+/CounterProject/build/
+/CounterDemo/nbproject/private/
+/CounterDemo/build/
