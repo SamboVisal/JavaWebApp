@@ -57,6 +57,8 @@
                 boolean isCkecked = false;
             %>
             Gender: <br><br>
+            
+    
             <input type="radio" name="gender" value="Male" checked=""> Male <br>
             <input type="radio" name="gender" value="Female"> Female <br>
             <input type="radio" name="gender" value="Other"> Other <br> <br>
